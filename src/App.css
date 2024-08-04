@@ -19,11 +19,19 @@ body {
   scroll-behavior: smooth;
 }
 
-.plate {
-  width: 280px !important;
-  height: 280px !important;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
+.box {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+
+input[type="range"] {
+  width: 100%;
+  height: 12px;
+  border-radius: 5px;
+}
+
+
+
+
+
+
