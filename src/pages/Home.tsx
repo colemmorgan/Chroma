@@ -141,10 +141,10 @@ const Home: React.FC<HomeProps> = () => {
             </span>
           </ul>
           <ul className="mt-8 flex justify-center gap-8 font-semibold">
-            <li>Home</li>
-            <li>About</li>
-            <li>Examples</li>
-            <li>Adjust Photos</li>
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#examples">Examples</a>
+            <Link to="/adjust-photos"><li>Adjust Photos</li></Link>
           </ul>
           <p className="text-center mt-8 font-medium">
             {" "}
