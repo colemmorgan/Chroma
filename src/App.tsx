@@ -1,6 +1,8 @@
 import "./App.css";
+import Examples from "./components/Examples";
+import { SiDevpost } from "react-icons/si";
+import { FaGithub, FaUser } from "react-icons/fa";
 import ImageEditor from "./components/ImageUploader";
-import Example from "./components/ui/Example";
 
 const App = () => {
   return (
@@ -9,7 +11,8 @@ const App = () => {
         <div className="max-w-[1100px] mx-auto px-4 h-20 flex justify-between items-center">
           <p className="text-xl font-bold text-accent">Chroma</p>
           <ul className="flex gap-6 font-semibold text-sm">
-            <li className="cursor-pointer">About</li>
+            <a href="#about">About</a>
+            <a href="#examples">Examples</a>    
             <li className="cursor-pointer">Adjust Photos</li>
           </ul>
         </div>
@@ -60,7 +63,7 @@ const App = () => {
           </div>
         </div>
       </section>
-      <section className="pt-14 pb-24 max-w-[1508px] mx-auto px-4">
+      <section className="pt-14 pb-24 max-w-[1508px] mx-auto px-4" id="about">
         <h2 className="text-5xl font-bold text-center">About</h2>
         <ul className="mt-16 flex flex-wrap gap-10 justify-center">
           <li className="bg-secondary bg-opacity-30 p-10  rounded-lg">
@@ -101,15 +104,39 @@ const App = () => {
           </li>
         </ul>
       </section>
-      <section className="py-24 max-w-[1432px] mx-auto px-4 min-h-screen">
+      <section className="py-24 max-w-[1416px] w-full mx-auto px-4 min-h-screen" id="examples">
         <h3 className="text-center text-5xl font-bold">Examples</h3>
-        <ul className="flex flex-col gap-16 mt-16 items-center">
-         <Example/>
-         <Example/>
-         <Example/>
-        </ul>
+        <Examples />
       </section>
-      {/* <ImageEditor/> */}
+      <section className="pt-16 pb-32">
+        <div className="max-w-[1100px] w-full mx-auto h-[450px] bg-secondary bg-opacity-35 rounded-[48px] flex flex-col items-center justify-center px-4">
+          <p className="max-w-[840px] font-semibold text-4xl leading-normal text-center">
+            Upload your image, select your mode and see better. Its that easy
+            with <span className="text-accent">Chroma</span>.
+          </p>
+          <button className="mt-8 bg-accent text-light font-semibold py-2.5 w-64 text-lg rounded-xl">
+            Get Started
+          </button>
+        </div>
+      </section>
+      <footer className="pt-16 pb-20">
+        <div className="max-w-[700px] px-4 mx-auto ">
+          <p className="text-center font-bold text-3xl text-accent">Chroma</p>
+          <ul className="mt-8 flex gap-8 justify-center text-4xl">
+            <span><SiDevpost/></span>
+            <span><FaGithub/></span>
+            <span><FaUser/></span>
+          </ul>
+          <ul className="mt-8 flex justify-center gap-8 font-semibold">
+            <li>Home</li>
+            <li>About</li>
+            <li>Examples</li>
+            <li>Adjust Photos</li>
+          </ul>
+          <p className="text-center mt-8 font-medium"> © Copyright Chroma 2024. All Rights Reserved.</p>
+        </div>
+      </footer>
+      <ImageEditor/>
     </>
   );
 };

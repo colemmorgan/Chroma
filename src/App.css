@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 }
 
 
@@ -11,4 +12,18 @@ body {
   background-color: #F0F4F8;
   color: #1A202C;
   font-family: "Montserrat", sans-serif;
+  
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.plate {
+  width: 280px !important;
+  height: 280px !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
