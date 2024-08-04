@@ -9,10 +9,10 @@ type ExampleProps = {
 const Example: React.FC<ExampleProps> = ({index, name, images}) => {
   return (
     <div className="">
-      <p className="text-2xl font-semibold">
+      <p className="text-2xl font-semibold text-center md:text-left">
         <span className="text-accent">{index + 1}.</span> User with {name}
       </p>
-      <div className="flex flex-wrap items-center mt-6">
+      <div className="flex justify-center md:justify-start flex-wrap items-center mt-6">
         <Item url={images[0]} desc={"Original"}/>
         <Arrow />
         <Item url={images[1]} desc={`Original with ${name}`}/>

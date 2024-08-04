@@ -137,13 +137,13 @@ const Editor: React.FC<EditorProps> = () => {
           </ul>
         </div>
       </nav>
-      <div className="max-w-[1100px] px-4 mx-auto pt-14">
+      <div className="max-w-[1100px] px-4 mx-auto pt-14 pb-14">
         <h1 className="text-center font-bold text-5xl">Image Adjuster</h1>
         <p className="text-center font-semibold mt-4 text-lg opacity-85">
           Enhance color differentiation
         </p>
-        <div className="w-full h-[475px] mt-14 border border-dark border-opacity-15 rounded-xl box flex">
-          <div className="w-[420px] min-w-[420px] border-r border-dark border-opacity-15 h-full px-6 py-8">
+        <div className="min-h-[475px] mt-14 border border-dark border-opacity-15 rounded-xl box flex flex-col lg:flex-row items-center lg:items-stretch">
+          <div className="max-w-[420px] lg:min-w-[420px] lg:border-r border-dark border-opacity-15 h-full px-6 py-8">
             <div className="">
               <p className="font-medium">
                 Adjustment Strength (100% Recommended)
@@ -218,7 +218,8 @@ const Editor: React.FC<EditorProps> = () => {
           <div className="w-full px-10 py-8 relative">
           {image && <span className="absolute right-5 top-5 text-xl text-red-500 cursor-pointer z-10" onClick={() => setImage("")}><FaRegTrashAlt/></span>}
             <div
-              className={`w-full h-full border-2 border-accent ${image ? "border-opacity-0" : "border-opacity-50"} border-dashed flex flex-col items-center justify-center`}
+              className={`w-full h-full border-2 border-accent ${image ? "border-opacity-0" : "border-opacity-50"} border-dashed flex flex-col items-center justify-center
+              min-h-[400px] lg:min-h-0 `}
               onDragOver={handleDragOver}
               onDrop={handleDrop}
             >

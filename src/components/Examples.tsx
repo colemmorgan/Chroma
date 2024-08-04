@@ -34,7 +34,7 @@ const Examples: React.FC<ExamplesProps> = () => {
     },
   ];
   return (
-    <ul className="flex flex-col gap-16 mt-16">
+    <ul className="flex flex-col gap-16 mt-16  w-full">
       {examples.map((example, index) => (
         <Example index={index} name={example.name} images={example.src} key={example.name}/>
       ))}
